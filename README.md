@@ -1,5 +1,5 @@
-Index:
-
+## Index:
+---
 [12/04/2025]
 1. Palindrome of a number
 2. Reverse k elements

@@ -27,6 +27,23 @@ class LinkedList:
             current = current.Next
         print()
 
+    def sort_list(self):
+        # First, extract all values from the linked list
+        values = []
+        current = self.head
+        while current:
+            values.append(current.val)
+            current = current.Next
+
+        # Sort the values
+        values.sort()
+
+        # Rebuild the list with sorted values
+        self.head = None
+        self.tail = None
+        for val in values:
+            self.add_node(val)
+
 def merge_lists(ll1, ll2):
     llo = LinkedList()
 
@@ -56,12 +73,14 @@ if __name__ == "__main__":
 
     leng1 = int(input())
     data1 = [int(i) for i in input().split()]
+    data1.sort()  
     for i in data1:
         linked_list1.add_node(i)
     
     for _ in range(k - 1):
         leng2 = int(input())
         data2 = [int(i) for i in input().split()]
+        data2.sort()
         
         linked_list2 = LinkedList()
         for i in data2:

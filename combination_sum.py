@@ -9,11 +9,13 @@ def combination_sum(candidates, target):
 
     return dp[target]
 
-n = int(input())
-candidates = list(map(int, input().split()))
-target = int(input())
 
-combinations = combination_sum(candidates, target)
-
-for combo in combinations:
-    print(" ".join(map(str, combo)))
+if __name__ == "__main__":
+    n = int(input())
+    candidates = list(map(int, input().split()))
+    target = int(input())
+    
+    combinations = combination_sum(candidates, target)
+    
+    for combo in combinations:
+        print(" ".join(map(str, combo)))
